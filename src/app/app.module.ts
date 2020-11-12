@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { LayoutModule } from '@angular/cdk/layout';
+import { AeDocModule } from 'projects/ae-doc/src/public-api';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule,
+    AeDocModule
   ],
   providers: [
     {

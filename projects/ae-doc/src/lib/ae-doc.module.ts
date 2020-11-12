@@ -8,7 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { HighlightModule } from 'ngx-highlightjs';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
@@ -16,7 +16,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
+import { SampleComponentComponent } from './sample-component/sample-component.component';
 
 
 @NgModule({
@@ -25,22 +25,22 @@ import { MatListModule } from '@angular/material/list';
     AeComponentViewComponent,
     AeTextContentComponent,
     NavComponent,
-
+    SampleComponentComponent,
   ],
   imports: [
     CommonModule,
+    LayoutModule,
     HighlightModule,
     MatTabsModule,
+    MatTooltipModule,
     MatCardModule,
     MatIconModule,
     MatButtonModule,
-    MatTooltipModule,
     ClipboardModule,
-    LayoutModule,
     MatToolbarModule,
     MatSidenavModule,
     MatListModule
   ],
-  exports: [AeDocComponent, AeComponentViewComponent, AeTextContentComponent]
+  exports: [AeDocComponent, AeComponentViewComponent, AeTextContentComponent, NavComponent, SampleComponentComponent]
 })
 export class AeDocModule { }

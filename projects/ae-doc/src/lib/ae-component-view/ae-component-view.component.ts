@@ -2,8 +2,15 @@ import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 
 import { IconType } from 'ng-icon-type';
 
+/**
+ * @param(string)   name of the component
+ * @param(string)   HTML of the component
+ * @param(string)   CSS of the component
+ * @param(string)   TS of the component
+ * @param(any)      component class
+ */
 export interface AeComponentView {
-  name?: string;
+  name: string;
   HTML?: string;
   CSS?: string;
   TS?: string;
@@ -48,9 +55,7 @@ export class AeComponentViewComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    const s = this.input;
-    this.input = null;
-    this.input = s;
+
   }
 
   ngOnInit(): void {

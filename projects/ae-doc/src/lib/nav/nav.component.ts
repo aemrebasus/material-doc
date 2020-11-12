@@ -2,26 +2,15 @@ import { Component, Input } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { AeComponentView } from '../ae-component-view/ae-component-view.component';
+import { DEFAULT_NAV_COMPONENT_INPUT } from './sample.data';
 
-/**
- * @param(string)   name          name of the component
- * @param(any)      component     Class of the component
- * @param(string)   html          Html code to display component
- * @param(string)   css           Style file content for this sample.
- * @param(string)   ts            Typescript code for this component.
- */
-export interface NavMenuItem {
-  name?: string;
-  component?: any;
-  html?: string;
-  css?: string;
-  ts?: string;
-}
+
 
 export interface Nav {
-  menu: NavMenuItem[];
+  name: string;
+  menu: AeComponentView[];
 }
-
 
 @Component({
   selector: 'ae-nav',
@@ -30,13 +19,9 @@ export interface Nav {
 })
 export class NavComponent {
 
+  @Input() input: Nav = DEFAULT_NAV_COMPONENT_INPUT;
 
-  @Input() input: Nav = {
-    menu: [
-      {}
-    ]
-  };
-
+  component: AeComponentView; // selected component;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -45,6 +30,10 @@ export class NavComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) { }
+
+  setComponent(component: any): void {
+    this.component = component;
+  }
 
 }
 
