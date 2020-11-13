@@ -1,6 +1,12 @@
 {
   "name": "ae-doc",
   "version": "0.0.1",
+  "description": "Angular Material Documentation",
+  "homepage": "",
+  "repository": {
+    "type": "NPM",
+    "url": ""
+  },
   "peerDependencies": {
     "@angular/common": "^10.1.6",
     "@angular/core": "^10.1.6",
