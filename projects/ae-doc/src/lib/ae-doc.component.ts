@@ -1,23 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Nav } from './nav/nav.component';
-import { DEFAULT_NAV_COMPONENT_INPUT } from './nav/sample.data';
+import { Component, Input } from '@angular/core';
+import { AeComponentView } from './ae-component-view/ae-component-view.component';
 
-
-
-export interface AeDoc extends Nav { }
+export interface AeDoc {
+  name: string;
+  description?: string;
+  nav: AeComponentView[];
+  inputs?: { name: string, description: string };
+  events?: { name: string, description: string };
+}
 
 @Component({
   selector: 'ae-doc',
   templateUrl: './ae-doc.component.html',
   styleUrls: ['./ae-doc.component.scss']
 })
-export class AeDocComponent implements OnInit {
-
-  @Input() input: AeDoc = DEFAULT_NAV_COMPONENT_INPUT;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class AeDocComponent {
+  @Input() input: AeDoc;
 }
+

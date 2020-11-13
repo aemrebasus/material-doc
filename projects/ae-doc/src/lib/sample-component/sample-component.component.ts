@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   template: '<h3>{{name}}</h3>'
 })
 export class SampleComponentComponent {
-  name = 'Sample 1';
+  name = 'Your document will be shown here';
 }

@@ -27,12 +27,7 @@ export class AeComponentViewComponent implements OnInit, AfterViewInit {
   /**
    * @Input
    */
-  @Input() input: AeComponentView = {
-    name: 'No NAME Provided',
-    HTML: 'No HTML Provided',
-    CSS: 'No CSS Provided',
-    TS: 'No TS Provided',
-  };
+  @Input() input: AeComponentView;
 
   /**
    * @Internal

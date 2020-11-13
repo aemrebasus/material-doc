@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:site": "ng build --prod --base-href=./material-doc",
+    "build:lib": "ng build --prod ae-doc",
+    "deploy": "gh-pages -d dist/material-doc"
   },
   "private": true,
   "dependencies": {

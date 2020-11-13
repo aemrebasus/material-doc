@@ -1,11 +1,12 @@
+import { AeDocComponent } from '../ae-doc.component';
 import { SampleComponentComponent } from '../sample-component/sample-component.component';
 
 export const DEFAULT_NAV_COMPONENT_INPUT = {
-    name: 'Default Project Name',
+    name: 'Angular Material Documentation',
     menu: [
         {
-            name: 'Sample Component 1',
-            component: SampleComponentComponent,
+            name: 'Angular Documentation',
+            component: AeDocComponent,
             HTML: '<h1>Component Documentation</h1> <p>Documentation is fun</p>',
             TS: `
         const a = 100;

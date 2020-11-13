@@ -1,7 +1,4 @@
 import { NgModule } from '@angular/core';
-import { AeDocComponent } from './ae-doc.component';
-import { AeComponentViewComponent } from './ae-component-view/ae-component-view.component';
-import { AeTextContentComponent } from './ae-text-content/ae-text-content.component';
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
@@ -16,8 +13,12 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { SampleComponentComponent } from './sample-component/sample-component.component';
+import { MatTableModule } from '@angular/material/table';
 
+import { SampleComponentComponent } from './sample-component/sample-component.component';
+import { AeDocComponent } from './ae-doc.component';
+import { AeComponentViewComponent } from './ae-component-view/ae-component-view.component';
+import { AeTextContentComponent } from './ae-text-content/ae-text-content.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,15 @@ import { SampleComponentComponent } from './sample-component/sample-component.co
     ClipboardModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ],
-  exports: [AeDocComponent, AeComponentViewComponent, AeTextContentComponent, NavComponent, SampleComponentComponent]
+  exports: [
+    AeDocComponent,
+    AeComponentViewComponent,
+    AeTextContentComponent,
+    NavComponent,
+    SampleComponentComponent
+  ],
 })
 export class AeDocModule { }

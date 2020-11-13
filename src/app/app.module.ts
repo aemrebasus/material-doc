@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -11,14 +10,13 @@ import { AeDocModule } from 'projects/ae-doc/src/public-api';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AeDocModule,
     BrowserAnimationsModule,
     LayoutModule,
-    AeDocModule
   ],
   providers: [
     {

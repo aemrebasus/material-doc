@@ -3,14 +3,10 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { AeComponentView } from '../ae-component-view/ae-component-view.component';
-import { DEFAULT_NAV_COMPONENT_INPUT } from './sample.data';
 
-
-
-export interface Nav {
-  name: string;
-  menu: AeComponentView[];
-}
+export type Nav = {
+  nav: AeComponentView[]
+};
 
 @Component({
   selector: 'ae-nav',
@@ -19,7 +15,7 @@ export interface Nav {
 })
 export class NavComponent {
 
-  @Input() input: Nav = DEFAULT_NAV_COMPONENT_INPUT;
+  @Input() input: Nav;
 
   component: AeComponentView; // selected component;
 
