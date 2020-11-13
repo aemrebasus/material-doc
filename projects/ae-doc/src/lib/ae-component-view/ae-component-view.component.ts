@@ -11,6 +11,8 @@ import { IconType } from 'ng-icon-type';
  */
 export interface AeComponentView {
   name: string;
+  description?: string;
+  module?: string;
   HTML?: string;
   CSS?: string;
   TS?: string;

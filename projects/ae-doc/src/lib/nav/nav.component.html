@@ -12,16 +12,24 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-
+      <span>{{input.name}}</span>
     </mat-toolbar>
-    <div class="document-content" *ngIf="component">
 
-      <mat-tab-group>
-        <mat-tab label='OVERVIEW'>
+    <mat-tab-group *ngIf="component">
+      <mat-tab label='OVERVIEW'>
+        <div class="document-content">
+          <h3>{{component.name}}</h3>
+          <p>{{component.description}}</p>
           <ae-component-view [input]="component"></ae-component-view>
-        </mat-tab>
-      </mat-tab-group>
+        </div>
+      </mat-tab>
 
-    </div>
+      <mat-tab label="API">
+        <ae-text-content [content]="component.module"></ae-text-content>
+      </mat-tab>
+
+    </mat-tab-group>
+
+
   </mat-sidenav-content>
 </mat-sidenav-container>

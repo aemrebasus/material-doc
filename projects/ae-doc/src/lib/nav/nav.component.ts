@@ -5,6 +5,8 @@ import { map, shareReplay } from 'rxjs/operators';
 import { AeComponentView } from '../ae-component-view/ae-component-view.component';
 
 export type Nav = {
+  name: string;
+  description: string;
   nav: AeComponentView[]
 };
 

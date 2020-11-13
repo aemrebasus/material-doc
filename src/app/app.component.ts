@@ -4,21 +4,22 @@ import { AeDoc } from 'projects/ae-doc/src/public-api';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Angular Material Documentation';
-  input: AeDoc = {
-    name: 'Angular Component Docuemntation',
-    description: 'Some description ',
-    nav: [
-      {
-        name: 'AeDocComponent 1 ',
-
-        HTML: `<ae-doc [input]="input"></ae-doc>`,
-        TS: `
+    title = 'Angular Material Documentation';
+    input: AeDoc = {
+        name: 'Angular Component Docuemntation',
+        description: 'Some description ',
+        nav: [
+            {
+                name: 'AeDocComponent 1 ',
+                description: 'Create nice looking documentation pages for your components.',
+                module: 'import { AeDocModule, AeDoc } from "ae-doc"',
+                HTML: `<ae-doc [input]="input"></ae-doc>`,
+                TS: `
         import { Component, Input, OnInit } from '@angular/core';
         import { AeDoc } from 'projects/ae-doc/src/public-api';
 
@@ -39,13 +40,13 @@ export class AppComponent {
         }
 
     `,
-        component: SampleComponentComponent
-      },
-      {
-        name: 'AeDocComponent 2',
+                component: SampleComponentComponent
+            },
+            {
+                name: 'AeDocComponent 2',
 
-        HTML: `<ae-doc [input]="input"></ae-doc>`,
-        TS: `
+                HTML: `<ae-doc [input]="input"></ae-doc>`,
+                TS: `
         import { Component, Input, OnInit } from '@angular/core';
         import { AeDoc } from 'projects/ae-doc/src/public-api';
 
@@ -66,13 +67,13 @@ export class AppComponent {
         }
 
     `,
-        component: SampleComponentComponent
-      },
-      {
-        name: 'AeDocComponent 3',
+                component: SampleComponentComponent
+            },
+            {
+                name: 'AeDocComponent 3',
 
-        HTML: `<ae-doc [input]="input"></ae-doc>`,
-        TS: `
+                HTML: `<ae-doc [input]="input"></ae-doc>`,
+                TS: `
         import { Component, Input, OnInit } from '@angular/core';
         import { AeDoc } from 'projects/ae-doc/src/public-api';
 
@@ -93,8 +94,8 @@ export class AppComponent {
         }
 
     `,
-        component: SampleComponentComponent
-      }
-    ]
-  };
+                component: SampleComponentComponent
+            }
+        ]
+    };
 }
